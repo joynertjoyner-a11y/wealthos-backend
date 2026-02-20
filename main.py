@@ -32,3 +32,7 @@ async def upload(file: UploadFile = File(...), doc_type: str = Form("other")):
 @app.post("/blueprint")
 def blueprint(req: BlueprintRequest):
     return generate_blueprint(req.profile, req.parsed_docs)
+
+@app.post("/budget")
+def budget(req: BudgetRequest):
+    return compute_budget(req)
