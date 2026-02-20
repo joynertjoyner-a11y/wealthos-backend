@@ -1,3 +1,4 @@
+from budget import BudgetRequest, compute_budget
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
